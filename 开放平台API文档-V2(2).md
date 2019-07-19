@@ -46,6 +46,7 @@
 | send           | Boolean                   | 否   | 是否发起合同；<br />发起合同后不能再进行添加文档、<br />添加签署方等操作 |
 | category       | Category                  | 否   | 业务分类；默认为“默认业务分类”                               |
 | creator        | User                      | 否   | 创建人；默认为虚拟用户，<br />创建人必须已经加入对接方的公司 |
+| status         | String                    | 否   | 合同状态（接口返回值）：DRAFT（草稿）<br />RECALLED（已撤回），SIGNING（签署中），REJECTED（已退回），COMPLETE（已完成），EXPIRED（已过期），FILLING（拟定中），INVALIDING（作废中），INVALIDED（已作废） |
 | signatories    | List&lt;Signatory&gt;     | 否   | 签署方；签署合同的公司/个人；<br />发起合同时必传；          |
 | templateParams | List&lt;TemplateParam&gt; | 否   | 模板参数，用于文件模板的填参                                 |
 | documents      | List&lt;Document&gt;      | 否   | 合同文档（接口返回值）                                       |
